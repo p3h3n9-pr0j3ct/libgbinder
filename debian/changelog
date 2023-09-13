@@ -1,0 +1,406 @@
+libgbinder (1.1.10) unstable; urgency=low
+
+  * Release dead binder nodes
+  * Use gutil_memdup() instead of g_memdup()
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 10 May 2021 02:36:43 +0300
+
+libgbinder (1.1.9) unstable; urgency=low
+
+  * Include definition of _IOC_SIZE
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 20 Apr 2021 12:52:41 +0300
+
+libgbinder (1.1.8) unstable; urgency=low
+
+  * Handle out-of-range transaction codes
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 16 Apr 2021 19:11:14 +0300
+
+libgbinder (1.1.7) unstable; urgency=low
+
+  * Dropped use of g_main_context_invoke_full()
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 31 Mar 2021 23:10:37 +0300
+
+libgbinder (1.1.6) unstable; urgency=low
+
+  * Implemented support for passing object over the bridge
+  * Retry service name registration
+  * Wait for completion of the reply
+  * Fixed death handling by GBinderBridge
+  * Added gbinder_bridge_new2()
+  * Added -s option to binder-bridge
+  * Fixed invalid slice deallocation
+  * Made unit tests more reliable
+  * Make sure that libgbinder doesn't block on exit
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 02 Mar 2021 18:18:03 +0200
+
+libgbinder (1.1.5) unstable; urgency=low
+
+  * Fixed gbinder_remote_reply_copy_to_local() for empty replies
+  * Improved binder simulation
+  * Added GBinderBridge object
+  * Added proxy_object and bridge unit tests
+  * Added binder-bridge to libgbinder-tools package
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 29 Jan 2021 04:00:09 +0200
+
+libgbinder (1.1.4) unstable; urgency=low
+
+  * Fixed a threading issue
+  * Decode NULL object reference
+  * Added new basic HIDL types
+  * Set TF_ACCEPT_FDS transaction flag
+  * Added servicemanager_hidl unit test
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 21 Jan 2021 03:34:45 +0200
+
+libgbinder (1.1.3) unstable; urgency=low
+
+  * Improved unit test coverage
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 23 Dec 2020 21:48:27 +0200
+
+libgbinder (1.1.2) unstable; urgency=low
+
+  * Fixed random unit text failures
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 23 Dec 2020 12:39:22 +0200
+
+libgbinder (1.1.1) unstable; urgency=low
+
+  * Handle corner cases for abandoned loopers
+  * Pass 0x0f priority to aidl2 service list request.
+  * Improved binder simulation for unit tests
+  * Added servicemanager_aidl unit test
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 22 Dec 2020 15:15:10 +0200
+
+libgbinder (1.1.0) unstable; urgency=low
+
+  * Made RPC protocol configurable per binder device
+  * Made service managers configurable per binder device
+  * Added support for multiple config files
+  * Added "aidl2" variant of service manager
+  * Added "aidl2" variant of RPC protocol
+  * Added support for API level presets
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 04 Dec 2020 13:47:26 +0200
+
+libgbinder (1.0.47) unstable; urgency=low
+
+  * Make library executable on RPM based systems
+
+ -- Slava Monich <slava.monich@jolla.com>  Sat, 19 Sep 2020 20:14:20 +0300
+
+libgbinder (1.0.46) unstable; urgency=low
+
+  * Make sure we drop fds that are going to be closed
+  * Better diagnostics for polling failures
+  * Package binder-list and binder-ping utilities
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 31 Jul 2020 02:04:38 +0300
+
+libgbinder (1.0.45) unstable; urgency=low
+
+  * Always provide data buffer for hidl vector
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 27 Jul 2020 23:19:25 +0300
+
+libgbinder (1.0.44) unstable; urgency=low
+
+  * Never drop valid incoming transactions
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 29 Jun 2020 17:05:22 +0300
+
+libgbinder (1.0.43) unstable; urgency=low
+
+  * Hide internal symbols
+  * Respect arch specific lib dir
+  * Allow strip command to be replaced via environment variable
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 03 Jun 2020 15:15:40 +0300
+
+libgbinder (1.0.42) unstable; urgency=low
+
+  * Allow GBinderClient to use multiple interfaces
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 05 May 2020 19:56:39 +0300
+
+libgbinder (1.0.41) unstable; urgency=low
+
+  * Stop using GUtilIdlePool
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 14 Apr 2020 12:36:54 +0300
+
+libgbinder (1.0.40) unstable; urgency=low
+
+  * Support integration with non-glib event loops
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 09 Apr 2020 17:22:12 +0300
+
+libgbinder (1.0.39) unstable; urgency=low
+
+  * Adapted to side-by-side linking
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 02 Apr 2020 18:07:16 +0300
+
+libgbinder (1.0.38) unstable; urgency=low
+
+  * Allow to configure log level via environment
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 02 Apr 2020 00:12:01 +0300
+
+libgbinder (1.0.37) unstable; urgency=low
+
+  * Allow side-by-side linking with libglibutil
+  * Fixed compilation warnings
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 17 Mar 2020 20:15:11 +0200
+
+libgbinder (1.0.36) unstable; urgency=low
+
+  * Allow overwriting CC
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 16 Mar 2020 16:15:24 +0200
+
+libgbinder (1.0.35) unstable; urgency=low
+
+  * Added binder-ping example
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 25 Feb 2020 13:58:19 +0200
+
+libgbinder (1.0.34) unstable; urgency=low
+
+  * Better cleanup on unload to prevent crashes on exit
+  * Fixed rare memory leak in GBinderServiceManager
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 16 Dec 2019 12:25:56 +0200
+
+libgbinder (1.0.33) unstable; urgency=low
+
+  * Reuse loopers
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 13 Sep 2019 15:57:47 +0300
+
+libgbinder (1.0.32) unstable; urgency=low
+
+  * Refuse to perform transactions with dead objects
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 17 May 2019 15:57:30 +0300
+
+libgbinder (1.0.31) unstable; urgency=low
+
+  * Invalidate handle when remote object dies
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 13 May 2019 18:05:35 +0300
+
+libgbinder (1.0.30) unstable; urgency=low
+
+  * Added gbinder_local_object_new()
+  * Added gbinder_remote_object_ipc()
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 20 Feb 2019 11:59:08 +0200
+
+libgbinder (1.0.29) unstable; urgency=low
+
+  * Added gbinder_servicemanager_new_local_object2()
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 14 Feb 2019 18:17:53 +0300
+
+libgbinder (1.0.28) unstable; urgency=low
+
+  * Set type for local nulls to BINDER_TYPE_WEAK_BINDER
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 29 Jan 2019 02:49:10 +0200
+
+libgbinder (1.0.27) unstable; urgency=low
+
+  * Fixed outgoing oneway transactions
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 24 Jan 2019 18:55:16 +0200
+
+libgbinder (1.0.26) unstable; urgency=low
+
+  * Implement PING and INTERFACE transactions
+  * Add GBinderServiceName API
+  * Added gbinder_reader_read_string16_utf16()
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 23 Jan 2019 17:43:41 +0200
+
+libgbinder (1.0.25) unstable; urgency=low
+
+  * Added ServiceManager presence API
+
+    gbinder_servicemanager_wait()
+    gbinder_servicemanager_is_present()
+    gbinder_servicemanager_add_presence_handler()
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 22 Jan 2019 16:03:57 +0200
+
+libgbinder (1.0.24) unstable; urgency=low
+
+  * Revert "Make sure NULL objects are passed as BINDER_TYPE_WEAK_HANDLE"
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 18 Jan 2019 21:36:32 +0200
+
+libgbinder (1.0.23) unstable; urgency=low
+
+  * Added gbinder_reader_read_hidl_string_c()
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 15 Jan 2019 15:16:41 +0200
+
+libgbinder (1.0.22) unstable; urgency=low
+
+  * Added gbinder_client_interface()
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 10 Jan 2019 14:09:44 +0300
+
+libgbinder (1.0.21) unstable; urgency=low
+
+  * Added API to overwrite prefix length
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 18 Dec 2018 14:05:14 +0200
+
+libgbinder (1.0.20) unstable; urgency=low
+
+  * Added API to block incoming requests
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 17 Dec 2018 16:06:43 +0200
+
+libgbinder (1.0.19) unstable; urgency=low
+
+  * Added GBinderWriter memory allocation and cleanup API
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 14 Dec 2018 16:27:51 +0200
+
+libgbinder (1.0.18) unstable; urgency=low
+
+  * Implemented support for file descritors
+  * Allow GBinderClient without RPC header
+  * Added binder-dump test
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 10 Dec 2018 13:17:22 +0200
+
+libgbinder (1.0.17) unstable; urgency=low
+
+  * Added gbinder_writer_append_string16_utf16()
+  * Added gbinder_reader_read_nullable_string16_utf16()
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 07 Dec 2018 02:54:07 +0200
+
+libgbinder (1.0.16) unstable; urgency=low
+
+  * Added GBinderHidlVec and GBinderHidlString types
+  * Added gbinder_reader_copy()
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 06 Dec 2018 19:03:32 +0200
+
+libgbinder (1.0.15) unstable; urgency=low
+
+  * Implemented service polling for old servicemanager
+  * Added new tests and improved coverage for existing ones
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 05 Dec 2018 12:11:34 +0200
+
+libgbinder (1.0.14) unstable; urgency=low
+
+  * Changed bool padding from 0xff to 0x00
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 27 Nov 2018 17:20:18 +0200
+
+libgbinder (1.0.13) unstable; urgency=low
+
+  * Support for service registration notifications
+  * Make sure looper is started before gbinder_ipc_looper_new() returns
+
+ -- Slava Monich <slava.monich@jolla.com>  Sat, 17 Nov 2018 01:52:28 +0200
+
+libgbinder (1.0.12) unstable; urgency=low
+
+  * Add byte array reader and writer
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 31 Oct 2018 17:04:38 +0300
+
+libgbinder (1.0.11) unstable; urgency=low
+
+  * Use BINDER_TYPE_WEAK_HANDLE for NULL objects
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 24 Oct 2018 18:57:28 +0300
+
+libgbinder (1.0.10) unstable; urgency=low
+
+  * Fixed dependencies for unit tests
+  * Plugged memory leak in unit_reader
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 10 Oct 2018 14:44:44 +0300
+
+libgbinder (1.0.9) unstable; urgency=low
+
+  * Respect strong refs to GBinderLocalObject
+  * Added gbinder_reader_read_hidl_struct macro
+  * Added gbinder_reader_read_hidl_type_vec macro
+  * Added gbinder_reader_read_hidl_byte_vec macro
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 08 Oct 2018 11:41:33 +0300
+
+libgbinder (1.0.8) unstable; urgency=low
+
+  * Added gbinder_writer_append_hidl_vec()
+  * Added Added gbinder_reader_read_hidl_vec()
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 25 Sep 2018 01:08:54 +0300
+
+libgbinder (1.0.7) unstable; urgency=low
+
+  * Added gbinder_remote_request_copy_to_local()
+  * Added gbinder_remote_reply_copy_to_local()
+  * Make sure RPC protocol matches servicemanager type
+
+ -- Slava Monich <slava.monich@jolla.com>  Sun, 23 Sep 2018 22:47:16 +0300
+
+libgbinder (1.0.6) unstable; urgency=low
+
+  * Fixed GBinderServiceManager lifecycle management
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 21 Sep 2018 21:15:28 +0300
+
+libgbinder (1.0.5) unstable; urgency=low
+
+  * Added double and float support
+
+ -- Slava Monich <slava.monich@jolla.com>  Fri, 17 Aug 2018 00:01:27 +0300
+
+libgbinder (1.0.4) unstable; urgency=low
+
+  * Handle transaction result on main thread
+
+ -- Slava Monich <slava.monich@jolla.com>  Tue, 07 Aug 2018 11:19:29 +0300
+
+libgbinder (1.0.3) unstable; urgency=low
+
+  * Added gbinder_local_request_append_bool()
+  * Added gbinder_local_reply_append_bool()
+
+ -- Slava Monich <slava.monich@jolla.com>  Mon, 06 Aug 2018 19:15:29 +0300
+
+libgbinder (1.0.2) unstable; urgency=low
+
+  * Added gbinder_remote_request_sender_pid()
+  * Added gbinder_remote_request_sender_euid()
+
+ -- Slava Monich <slava.monich@jolla.com>  Wed, 25 Jul 2018 00:51:39 +0300
+
+libgbinder (1.0.1) unstable; urgency=low
+
+  * Initialize the buffer passed to the driver
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 19 Jul 2018 01:05:36 +0300
+
+libgbinder (1.0.0) unstable; urgency=low
+
+  * Initial release
+
+ -- Slava Monich <slava.monich@jolla.com>  Thu, 12 Jul 2018 00:37:21 +0300
